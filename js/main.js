@@ -34,6 +34,13 @@
     el.textContent = String(new Date().getFullYear());
   });
 
+  var printCvButton = document.querySelector("[data-print-cv]");
+  if (printCvButton) {
+    printCvButton.addEventListener("click", function () {
+      window.print();
+    });
+  }
+
   /* ---------- Theme ---------- */
   var htmlEl = document.documentElement;
   var themeBtn = document.querySelector(".theme-toggle");
