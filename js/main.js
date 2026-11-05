@@ -34,13 +34,6 @@
     el.textContent = String(new Date().getFullYear());
   });
 
-  var printCvButton = document.querySelector("[data-print-cv]");
-  if (printCvButton) {
-    printCvButton.addEventListener("click", function () {
-      window.print();
-    });
-  }
-
   /* ---------- Theme ---------- */
   var htmlEl = document.documentElement;
   var themeBtn = document.querySelector(".theme-toggle");
@@ -52,13 +45,15 @@
 
   function syncThemeButton() {
     if (themeBtn) {
+      var label = currentTheme() === "light" ? "Switch to dark theme" : "Switch to light theme";
       themeBtn.setAttribute(
         "aria-label",
-        currentTheme() === "light" ? "Switch to dark theme" : "Switch to light theme"
+        window.siteI18n ? window.siteI18n.t(label) : label
       );
     }
   }
 
+  window.addEventListener("languagechange", syncThemeButton);
   function applyTheme(theme, save) {
     htmlEl.setAttribute("data-theme", theme);
     if (save) {
@@ -243,13 +238,14 @@
     var valid = field.checkValidity();
     field.setAttribute("aria-invalid", String(!valid));
     if (error) {
-      error.textContent = valid ? "" : messages[field.name];
+      error.textContent = valid ? "" : window.siteI18n.t(messages[field.name]);
     }
     return valid;
   }
 
   function setStatus(text, kind) {
-    status.textContent = text;
+    status.dataset.message = text;
+    status.textContent = text ? window.siteI18n.t(text) : "";
     status.className = "form-status" + (kind ? " " + kind : "");
   }
 
@@ -262,6 +258,17 @@
         validateField(field);
       }
     });
+  });
+
+  window.addEventListener("languagechange", function () {
+    fields.forEach(function (field) {
+      if (field.getAttribute("aria-invalid") === "true") {
+        validateField(field);
+      }
+    });
+    if (status.dataset.message) {
+      setStatus(status.dataset.message, status.classList.contains("err") ? "err" : "");
+    }
   });
 
   form.addEventListener("submit", function (e) {

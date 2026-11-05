@@ -11,7 +11,13 @@ A responsive, multi-page portfolio built with plain HTML, CSS and JavaScript. No
 | Projects | `projects.html` | Project showcase with role, stack and results |
 | Contact | `contact.html` | Contact form and contact details |
 
-Shared files: `css/styles.css` (design tokens, layout, responsive rules) and `js/main.js` (mobile menu, footer year, contact form validation and submission).
+Shared files: `css/styles.css` (design tokens, layout, responsive rules), `js/i18n.js` (language selection and translations), and `js/main.js` (mobile menu, footer year, theme, and contact form behavior).
+
+The About page links to a complete, two-page English CV PDF at `assets/hedi-temani-cv.pdf`.
+
+## Languages
+
+The site is available in English, French and Arabic. Visitors choose a language on their first visit; their choice is saved in browser local storage and can be changed with the language button in the footer. Arabic pages switch to a right-to-left layout.
 
 ## Run locally
 
