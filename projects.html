@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Projects | Hedi Temani</title>
+  <meta name="description" content="Selected projects by Hedi Temani: web applications, booking flows and design systems.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307070B'/%3E%3Ctext x='16' y='22' font-size='15' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23FE8968'%3EHT%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Hedi Temani</a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Menu</span>
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Project showcase</p>
+        <h1>Selected work</h1>
+        <p class="lead">Web applications, booking flows and component libraries, from first wireframe to deployment.</p>
+      </div>
+    </section>
+
+    <section class="section-tight" aria-label="Projects">
+      <div class="container">
+
+        <article class="project" id="hobcom">
+          <img class="shot-img" src="assets/hobcomscreenshot.webp" alt="HobCom Agency web application home page">
+          <div>
+            <p class="meta">03/2026 – 04/2026</p>
+            <h2>HobCom Agency Web Application</h2>
+            <p class="desc">A Next.js (TypeScript) web application with a PHP backend mail service. The whole stack is containerized and deployed with Docker Compose to ensure 99.9% deployment uptime.</p>
+            <dl class="facts">
+              <dt>Role</dt><dd>Full-Stack &amp; UI/UX Developer</dd>
+              <dt>Client</dt><dd>HobCom Agency</dd>
+              <dt>Stack</dt><dd>Next.js, TypeScript, PHP, Docker Compose</dd>
+            </dl>
+            <ul class="tags">
+              <li>Next.js</li><li>TypeScript</li><li>PHP</li><li>Docker Compose</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project" id="smile-expert">
+          <img class="shot-img" src="assets/smileexpertscreenshot.webp" alt="Smile Expert appointment booking flow">
+          <div>
+            <p class="meta">2025 – 2026</p>
+            <h2>Smile Expert Healthcare Platform</h2>
+            <p class="desc">Multi-language appointment booking flows and accessible interface components, designed in Figma.</p>
+            <dl class="facts">
+              <dt>Role</dt><dd>Lead UI/UX Designer</dd>
+              <dt>Tools</dt><dd>Figma</dd>
+              <dt>Focus</dt><dd>Booking flows, accessibility, multi-language UI</dd>
+            </dl>
+            <div class="result">
+              <strong>22%</strong>
+              <span>decrease in booking conversion drop-offs</span>
+            </div>
+            <ul class="tags">
+              <li>Figma</li><li>UX design</li><li>Accessibility</li><li>Multi-language</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project" id="capgemini-pfe">
+          <div class="shot" role="img" aria-label="Screenshot unavailable for the Capgemini graduation project">Screenshot unavailable</div>
+          <div>
+            <p class="meta">03/2026 – 06/2026</p>
+            <h2>Full-Stack Application, Graduation Project</h2>
+            <p class="desc">A full-stack web application with an Angular (TypeScript) front end and a Python (Django REST Framework) back end. Secure RESTful endpoints reduced client-server data transfer latency by 20%, and a responsive component library in Figma met WCAG 2.1 across all core user flows.</p>
+            <dl class="facts">
+              <dt>Role</dt><dd>Full Stack Web Developer</dd>
+              <dt>Company</dt><dd>Capgemini, El Ghazela, Tunis</dd>
+              <dt>Stack</dt><dd>Angular, TypeScript, Django REST Framework, Figma</dd>
+            </dl>
+            <div class="result">
+              <strong>35%</strong>
+              <span>faster page load</span>
+            </div>
+            <ul class="tags">
+              <li>Angular</li><li>TypeScript</li><li>Django REST Framework</li><li>Figma</li><li>WCAG 2.1</li><li>CI/CD</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section section-alt cta" aria-labelledby="cta-title">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h2 id="cta-title">Have a project in mind? <span class="grad">Let's talk.</span></h2>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="contact.html">Send a message</a>
+          <a class="btn btn-ghost" href="about.html">About me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Hedi Temani · Nabeul, Tunisia</span>
+      <span class="footer-links">
+        <a href="mailto:hedi.temani97@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/hedi-temani-780870308/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.behance.net/hedi_temani" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a href="https://www.instagram.com/hedi.temani/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/Hedii.Temani/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
