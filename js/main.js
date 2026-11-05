@@ -134,7 +134,8 @@
         ".page-hero .eyebrow", ".page-hero h1", ".page-hero .lead",
         ".section-head", ".stat", ".card", ".panel", ".skill-group", ".entry",
         ".project", ".about-intro", ".cta .eyebrow", ".cta h2", ".cta .btn-row",
-        ".contact-grid form", ".info-list li", ".section-foot"
+        ".contact-grid form", ".contact-aside-heading", ".contact-method",
+        ".social-block", ".social-link", ".contact-extras p", ".section-foot"
       ];
 
       var countUp = function (node) {
