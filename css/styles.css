@@ -30,9 +30,9 @@
   --glow-1: rgba(239, 47, 82, 0.2);
   --glow-2: rgba(54, 56, 106, 0.55);
 
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+  --font-display: "Lora", Georgia, serif;
+  --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
 
   --container: 1200px;
 }
@@ -133,7 +133,7 @@ h3 {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.08;
 }
 
@@ -339,7 +339,7 @@ p {
 .hero h1 {
   max-width: 960px;
   font-size: clamp(2.75rem, 7vw, 5.5rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.02;
 }
 
@@ -356,7 +356,7 @@ p {
 .page-hero h1 {
   max-width: 900px;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.04;
 }
 
@@ -941,7 +941,7 @@ a.card:hover {
 .cta h2 {
   max-width: 820px;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   line-height: 1.05;
 }
 
