@@ -8,7 +8,7 @@ A responsive, multi-page portfolio built with plain HTML, CSS and JavaScript. No
 | --- | --- | --- |
 | Home | `index.html` | Introduction, highlights, featured projects, call to action |
 | About | `about.html` | Skills, experience, education, languages |
-| Projects | `projects.html` | Project showcase with role, stack and results |
+| Projects | `projects.html` | Case studies with project goals, contribution, reported outcomes and links |
 | Contact | `contact.html` | Contact form and contact details |
 
 Shared files: `css/styles.css` (design tokens, layout, responsive rules), `js/i18n.js` (language selection and translations), and `js/main.js` (mobile menu, footer year, theme, and contact form behavior).
@@ -27,11 +27,16 @@ Open `index.html` in a browser, or serve the folder:
 npx serve .
 ```
 
+## Project evidence
+
+Project impact figures are reported in the CV; measurement baselines and methods are not publicly documented. Keep this note accurate if the figures or evidence change. The HobCom and Smile Expert live links are included alongside their case studies. The Capgemini project currently links to its frontend and backend repositories rather than a live demo.
+
+No client or colleague testimonials were supplied, so the portfolio does not publish quotes. Add only approved, attributable feedback.
+
 ## Before you deploy
 
-1. **Add project screenshots.** Create an `assets/` folder, add your images, then replace each `<div class="shot">` placeholder with the `<img class="shot-img" ...>` line written in the comment above it. Do this on `index.html` and `projects.html`.
-2. **Activate the contact form.** Messages are emailed to you through [FormSubmit](https://formsubmit.co). After you deploy, send one test message from the live Contact page, then open the activation email FormSubmit sends to your inbox (check spam) and confirm it. Until you confirm, messages are not delivered. After sending, visitors see FormSubmit's thank-you page. To bring them back to your site instead, add `<input type="hidden" name="_next" value="https://your-site/contact.html">` inside the form.
-3. **Review the content.** All text comes from the CV. Change the contact details, project descriptions and links as needed. Your email, phone number and social links are public on the Contact page and in the footer.
+1. **Activate the contact form.** Messages are emailed to you through [FormSubmit](https://formsubmit.co). After you deploy, send one test message from the live Contact page, then open the activation email FormSubmit sends to your inbox (check spam) and confirm it. Until you confirm, messages are not delivered. After sending, visitors see FormSubmit's thank-you page. To bring them back to your site instead, add `<input type="hidden" name="_next" value="https://your-site/contact.html">` inside the form.
+2. **Review dates and links.** Confirm the CV, project timelines, social profiles, live demos and repository permissions are current before publishing.
 
 ## Deploy
 
@@ -60,7 +65,7 @@ Accept the defaults. No build command or output directory is needed.
 - [x] Design the website layout
 - [x] Create Home, About, Projects and Contact pages
 - [x] Responsive design (mobile menu, fluid grids; checked at 1440px and 390px widths, no horizontal scroll)
-- [x] Project showcase section
+- [x] Project case studies with contribution, impact context and live/source links
 - [x] Contact form with validation and spam protection
 - [ ] Deploy the website (see above)
 
